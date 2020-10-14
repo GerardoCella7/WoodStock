@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+body {
+  background-color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  height: 650px;
+  background-color: red;
+  border: 1px blue solid;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hleft{
+  background-image: url("./images/woodLeft.jpg");
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  filter: brightness(60%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hright{
+  background-image: url("./images/woodRight.jpg");
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  filter: brightness(60%);
+}
+
+.hmenu{
+  position: absolute;
+  color: white;
+  font-size: 1.5em;
+  top: 0;
+  width: 100%;
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  text-shadow: .1em .1em .1em black;
+}
+
+.hmenu a{
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.hmenu a:hover{
+  color: yellowgreen;
+  text-decoration: underline;
+}
+
+.hlogo{
+  position: absolute;
+  color: white;
+  font-size: 3em;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  text-shadow: .1em .1em .1em black;
+}
+
+main{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2em;
+}
+
+main>div{
+  text-align: center;
+  padding: 2em;
+}
+
+main article{
+  padding: 1em;
+}
+
+main article h2{
+  border-left: .5em tan solid;
+  padding: .5em;
+  margin-left: 1.5em;
+  text-transform: uppercase;
+}
+
+main article div{
+  text-align: left;
+  font-size: 1.2em;
+  max-width: 80%;
+  margin-left: 2em;
+  margin-bottom: 5em;
+  color: gray;
+}
+
+main article hr{
+  border: 2px grey solid;
+  width: 25%;
+  margin-left: 13em;
+}
+
+main article a{
+  display: block;
+  border: 3px tan solid;
+  padding: 1em 3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: -2.5em;
+  width: 20%;
+}
+
+section{
+  background-color: rgb(34, 29, 29);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+section div:first-child{
+  text-align: right;
+}
+section h2{
+  color: black;
+  background-color: white;
+  padding: .5em 2em;
+  display: inline-block;
+  font-size: 2.5em;
+  margin-top: 3em;
+  margin-left: -3em;
+}
+
+section h3{
+  color: white;
+  font-size: 2.5em;
+  margin-top: -.5em;
+  padding-left: 2em;
+}
+
+section div div{
+  color: white;
+  width: 65%;
+  margin: 0 auto;
+}
+
+section hr{
+  border: 2px white solid;
+  width: 25%;
+  margin-left: 18em;
+  margin-top: 5em;
+}
+
+section a{
+  display: block;
+  border: 3px tan solid;
+  padding: 1em 3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: -2.5em;
+  margin-left: 3em;
+  width: 20%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+form{
+  margin: 5em auto;
+  width: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form div input[type="text"]{
+  width: 40%;
+}
+
+form div input[type="email"]{
+  width: 60%;
+}
+
+form div input, form div textarea{
+  margin: 1em;
+  padding: .5em;
+  padding-left: 1.5em;
+  border-radius: 2em;
+}
+
+form div textarea{
+  width: 85%
+}
+
+footer{
+  text-align: center;
+  font-size: 6em;
+  background-color: rgb(34, 29, 29);
+  color: white;
 }
